@@ -1,0 +1,136 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Droid Sans Mono';
+  src: url('../fonts/DroidSansMono.eot');
+  src: local('☺'),
+       url('../fonts/DroidSansMono.woff') format('woff'),
+       url('../fonts/DroidSansMono.ttf') format('truetype'),
+       url('../fonts/DroidSansMono.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Positioning */
+
+html, body, #outer {
+  height: 100%;
+  width: 100%;
+}
+#outer {
+  display: table;
+}
+#inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+#mode {
+  margin: 0 auto;
+  width: 5em;
+}
+
+.separator {
+  height: 0.05em;
+}
+
+#timers {
+  height: 1.15em;
+  position: relative;
+}
+.timer {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#buttons {
+  position: relative;
+}
+.button {
+  position: absolute;
+  height: 0.15em;
+  width: 2.4em;
+}
+.left {
+  left: 0;
+  top: 0;
+}
+.right {
+  right: 0;
+  top: 0;
+}
+
+/* Styling */
+
+body {
+  background: #fff;
+
+  -webkit-transition: background-color .5s linear;
+     -moz-transition: background-color .5s linear;
+       -o-transition: background-color .5s linear;
+          transition: background-color .5s linear;
+}
+
+#outer {
+  /* may degrade performance */
+  background: -webkit-gradient(radial, center center, 250, center center, 1000, from(rgba(0,0,0,0)), to(rgba(0,0,0,.5)));
+  background: -webkit-radial-gradient(center, circle closest-corner, rgba(0,0,0,0) 25%, rgba(0,0,0,.5) 100%);
+  background:    -moz-radial-gradient(center, circle closest-corner, rgba(0,0,0,0) 25%, rgba(0,0,0,.5) 100%);
+  background:      -o-radial-gradient(center, circle closest-corner, rgba(0,0,0,0) 25%, rgba(0,0,0,.5) 100%);
+  background:         radial-gradient(center, circle closest-corner, rgba(0,0,0,0) 25%, rgba(0,0,0,.5) 100%);
+}
+
+#mode {
+  color: #fff;
+  font: 10em 'Droid Sans Mono', monospace;
+  letter-spacing: -0.025em;
+  text-align: center;
+  text-transform: uppercase;
+
+  -webkit-text-shadow: 0 0 .05em rgba(0,0,0,.5);
+     -moz-text-shadow: 0 0 .05em rgba(0,0,0,.5);
+       -o-text-shadow: 0 0 .05em rgba(0,0,0,.5);
+          text-shadow: 0 0 .05em rgba(0,0,0,.5);
+}
+
+.separator {
+  background: #fff;
+
+  -webkit-box-shadow: 0 0 .05em rgba(0,0,0,.5);
+     -moz-box-shadow: 0 0 .05em rgba(0,0,0,.5);
+       -o-box-shadow: 0 0 .05em rgba(0,0,0,.5);
+          box-shadow: 0 0 .05em rgba(0,0,0,.5);
+}
+
+.timer {
+  -webkit-transition: opacity .5s ease-in-out;
+     -moz-transition: opacity .5s ease-in-out;
+       -o-transition: opacity .5s ease-in-out;
+          transition: opacity .5s ease-in-out;
+}
+
+.dec #now-dec { opacity: 1.0; }
+.dec #now-hex { opacity: 0.0; }
+.hex #now-dec { opacity: 0.0; }
+.hex #now-hex { opacity: 1.0; }
+
+.button {
+  background: #fff;
+  cursor: pointer;
+
+  -webkit-box-shadow: 0 0 .05em rgba(0,0,0,.5);
+     -moz-box-shadow: 0 0 .05em rgba(0,0,0,.5);
+       -o-box-shadow: 0 0 .05em rgba(0,0,0,.5);
+          box-shadow: 0 0 .05em rgba(0,0,0,.5);
+
+  -webkit-transition: opacity .5s ease-in-out;
+     -moz-transition: opacity .5s ease-in-out;
+       -o-transition: opacity .5s ease-in-out;
+          transition: opacity .5s ease-in-out;
+}
+
+.dec #but-dec { opacity: 1.0; }
+.dec #but-hex { opacity: 0.5; }
+.hex #but-dec { opacity: 0.5; }
+.hex #but-hex { opacity: 1.0; }
